@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Saimina' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'Collude, Collude until Betrayed'
+strategy_description = 'First round collude, then if they have c as their most recent move, collude. Otherwise betray'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -16,8 +16,12 @@ def move(my_history, their_history, my_score, their_score):
     
     Make my move.
     Returns 'c' or 'b'. 
-    '''
-
+    '''  
+  if len(my_history) == 0:
+    return'c'
+  elif 'b' in their_history:
+    return 'b'
+  else:
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].

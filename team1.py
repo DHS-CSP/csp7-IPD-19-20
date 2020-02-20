@@ -21,6 +21,6 @@ def move(my_history, their_history, my_score, their_score):
   else:
     return 'b'
   if my_score <= -5000 and their_score >= my_score:
-    return 'b'
+    return 'b' 
 
 

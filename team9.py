@@ -6,9 +6,11 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
+
 team_name = 'lastplace'
 strategy_name = 'Mimic'
 strategy_description = 'Start off with collude and then copy what the opponent previously did '
+
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
